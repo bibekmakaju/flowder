@@ -21,7 +21,7 @@ class DownloaderUtils {
 
   /// Function to be called when the download has finished.
   final VoidCallback onDone;
-  final Function(dynamic?,StackTrace)? onError;
+  final VoidCallback? onError;
 
   /// Function with the current values of the download
   /// ```dart

@@ -21,7 +21,7 @@ class DownloaderUtils {
 
   /// Function to be called when the download has finished.
   final VoidCallback onDone;
-  final Function(dynamic?,StackTrace)? onError;
+  final VoidCallback onDone;
 
   /// Function with the current values of the download
   /// ```dart
@@ -36,6 +36,5 @@ class DownloaderUtils {
     this.deleteOnCancel = false,
     required this.onDone,
     required this.progressCallback,
-    this.onError,
   });
 }

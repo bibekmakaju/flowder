@@ -70,9 +70,7 @@ class Flowder {
           if (options.client != null) client.close();
         },
         onError: (error) async {
-          if (options.onError != null) {
-            options.onError!(error,StackTrace.current);
-          }
+          if(options.onError)
           subscription!.pause();
         },
       );

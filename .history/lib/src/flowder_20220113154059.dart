@@ -69,11 +69,8 @@ class Flowder {
           await sink.close();
           if (options.client != null) client.close();
         },
-        onError: (error) async {
-          if (options.onError != null) {
-            options.onError!(error,StackTrace.current);
-          }
-          subscription!.pause();
+        onError: (error) async{
+          subscription!.pause()
         },
       );
       return subscription!;
